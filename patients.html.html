@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Пациенты</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1>🧑‍⚕️ Пациенты</h1>
+<button onclick="window.location.href='admin.html'">
+⬅️ Артка кайтуу
+</button>
+<div class="form">
+  <input type="text" id="name" placeholder="Имя">
+  <input type="text" id="surname" placeholder="Фамилия">
+  <input type="date" id="birth">
+<select id="doctor"></select>
+  <button onclick="addPatient()">Кошуу</button>
+</div>
+
+<hr>
+
+<h2>📋 Список пациентов</h2>
+<input type="text" id="search" placeholder="Издөө...">
+<div id="list"></div>
+
+<script type="module" src="../js/patients.js"></script>
+
+</body>
+</html>

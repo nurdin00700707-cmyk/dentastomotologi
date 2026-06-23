@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<h1>🦷 DENTAL SYSTEM</h1>
+<p>Dental Clinic Management System</p>
+<style>
+body {
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.card {
+  background:#1e293b;
+  margin:15px auto;
+  padding:20px;
+  width:300px;
+  border-radius:15px;
+  font-size:20px;
+}
+
+.nav {
+  margin-top: 20px;
+}
+
+.nav button {
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background: #16a34a;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>📊 Админ панель</h1>
+
+<!-- НАВИГАЦИЯ -->
+<div class="nav">
+  <button onclick="go('patients')">👤 Пациент</button>
+  <button onclick="go('doctors')">👨‍⚕️ Врач</button>
+  <button onclick="go('teeth')">🦷 Тиш карта</button>
+</div>
+
+<!-- СТАТИСТИКА -->
+<div class="card">💰 Доход: <span id="income">0</span> сом</div>
+<div class="card">👤 Пациент: <span id="patients">0</span></div>
+<div class="card">👨‍⚕️ Врач: <span id="doctors">0</span></div>
+<div class="card">
+  <h3>🕒 Иш тартиби</h3>
+
+  <p>📅 Дүйшөмбү - Ишемби</p>
+  <p>⏰ 08:00 - 18:00</p>
+
+  <p>🏠 Жекшемби — Дем алыш</p>
+</div>
+
+<!-- ГРАФИК -->
+<canvas id="chart" width="300" height="200"></canvas>
+
+<!-- СКРИПТТЕР -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="../js/admin.js"></script>
+
+<!-- ПЕРЕХОД -->
+<script>
+function go(page){
+  window.location.href = page + ".html";
+}
+</script>
+
+</body>
+</html>

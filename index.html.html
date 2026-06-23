@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style>
+body {
+  background:#020617;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+}
+
+input,button{
+  padding:10px;
+  margin:10px;
+  border-radius:6px;
+  border:none;
+}
+
+button{
+  background:#22c55e;
+  color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🔐 Кирүү</h1>
+
+<input id="login" placeholder="login">
+<input id="password" type="password" placeholder="password">
+<input id="password" placeholder="password" onkeypress="if(event.key==='Enter') login()">
+<br>
+
+<button onclick="login()">Кирүү</button>
+
+<script>
+function login() {
+  const username = document.getElementById("login").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "admin" && password === "1234") {
+    window.location.href = "pages/admin.html";
+  } else {
+    alert("Неверный логин или пароль ❌");
+  }
+
+  document.getElementById("login").value = "";
+  document.getElementById("password").value = "";
+}
+</script>
+
+</body>
+<footer style="background:#222; color:white; text-align:center; padding:20px; margin-top:30px;">
+
+    <h3>Тема: «Стоматологиялык клиника автоматташтырылган системасын долбоорлоо жана иштеп чыгуу»</h3>
+
+    <p><strong>Аткарган:</strong> Момунов Нурдин Алижанович</p>
+
+    <p><strong>Жетекчи:</strong> Абдуллаев И.К.</p>
+
+    <p><strong>Кеңешчи:</strong> Алмаз К. Айгерим</p>
+
+    <hr>
+
+    <h4>Байланыш маалыматы</h4>
+
+    <p>
+        📷 Instagram:
+        <a href="https://instagram.com/momunovw.l7" target="_blank" style="color:#4da6ff;">
+            momunovw.l7
+        </a>
+    </p>
+
+    <p>
+        💬 WhatsApp:
+        <a href="https://wa.me/996502697754" target="_blank" style="color:#4da6ff;">
+            +996 502 697 754
+        </a>
+    </p>
+
+    <p>
+        📞 Телефон:
+        <a href="tel:+996502697754" style="color:#4da6ff;">
+            +996 502 697 754
+        </a>
+    </p>
+
+    <p>📍 Дарек: Токтогул көчөсү 16</p>
+
+    <p>© 2026 Dental System</p>
+
+</footer>
+<div class="card">
+  <h3>🕒 Иш тартиби</h3>
+
+  <p>📅 Дүйшөмбү - Ишемби</p>
+  <p>⏰ 08:00 - 18:00</p>
+
+  <p>🏠 Жекшемби — Дем алыш</p>
+</div>
+</body>
+</html>

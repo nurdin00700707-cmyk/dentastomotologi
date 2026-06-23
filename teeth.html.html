@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Teeth</title>
+
+<style>
+body{
+  background:#020617;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+
+#topTeeth,
+#bottomTeeth{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin:15px 0;
+}
+
+.tooth{
+  width:55px;
+  height:70px;
+  background:white;
+  border:2px solid #cbd5e1;
+  border-radius:25px 25px 15px 15px;
+  color:black;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 0 10px rgba(255,255,255,.2);
+}
+
+.tooth:hover{
+  transform:scale(1.1);
+}
+
+.deleted{
+  background:red !important;
+  color:white;
+}
+
+.crown{
+  background:#3b82f6 !important;
+  color:white;
+}
+
+.filling{
+  background:#22c55e !important;
+  color:white;
+}
+
+.canal{
+  background:#f59e0b !important;
+  color:white;
+}
+
+.bracket{
+  background:#a855f7 !important;
+  color:white;
+}
+
+select,
+button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  margin:5px;
+}
+
+button{
+  background:#22c55e;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+<button onclick="window.location.href='admin.html'">
+⬅️ Артка кайтуу
+</button>
+<h2>🦷 Тиш картасы</h2>
+
+<select id="patient"></select>
+
+<select id="action">
+
+  <option value="1000">Удалить (1000)</option>
+  <option value="2000">Коронка (2000)</option>
+
+  <option value="800">Пломба (800)</option>
+  <option value="1500">Канал (1500)</option>
+  <option value="300">Рентген (300)</option>
+
+  <option value="15000">Брекет (15000)</option>
+  <option value="1000">Брекет контроль (1000)</option>
+
+  <option value="1200">Альвеолит (1200)</option>
+  <option value="3000">Агартуу (3000)</option>
+
+</select>
+
+<br>
+
+<div id="topTeeth">
+  <div class="tooth">18</div>
+  <div class="tooth">17</div>
+  <div class="tooth">16</div>
+  <div class="tooth">15</div>
+  <div class="tooth">14</div>
+  <div class="tooth">13</div>
+  <div class="tooth">12</div>
+  <div class="tooth">11</div>
+
+  <div style="width:40px"></div>
+
+  <div class="tooth">21</div>
+  <div class="tooth">22</div>
+  <div class="tooth">23</div>
+  <div class="tooth">24</div>
+  <div class="tooth">25</div>
+  <div class="tooth">26</div>
+  <div class="tooth">27</div>
+  <div class="tooth">28</div>
+</div>
+
+<div id="bottomTeeth">
+  <div class="tooth">48</div>
+  <div class="tooth">47</div>
+  <div class="tooth">46</div>
+  <div class="tooth">45</div>
+  <div class="tooth">44</div>
+  <div class="tooth">43</div>
+  <div class="tooth">42</div>
+  <div class="tooth">41</div>
+
+  <div style="width:40px"></div>
+
+  <div class="tooth">31</div>
+  <div class="tooth">32</div>
+  <div class="tooth">33</div>
+  <div class="tooth">34</div>
+  <div class="tooth">35</div>
+  <div class="tooth">36</div>
+  <div class="tooth">37</div>
+  <div class="tooth">38</div>
+</div>
+
+<h3>Жалпы: <span id="total">0</span> сом</h3>
+
+<!-- 📊 ГРАФИК УШУЛ ЖЕР -->
+<canvas id="incomeChart"></canvas>
+
+<br>
+
+<button onclick="downloadPDF()">📄 PDF</button>
+<button onclick="deleteLast()">🗑️ Өчүрүү</button>
+
+<!-- 🔥 БУЛ МААНИЛҮҮ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="module" src="../js/teeth.js"></script>
+
+</body>
+</html>
